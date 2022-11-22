@@ -9,9 +9,12 @@
 #include<conio.h>
 #include<cstring>
 #include<map>
+#include<fstream>
+#include<string>
 #include "./user.cpp"
 // #include "./Console.cpp"
 using namespace std;
+
 int users =0;
 int count_attempt=0;
 int curr_user=0;
@@ -24,6 +27,147 @@ void showtime()
 	char *dt = ctime(&now);
 	cout<<dt;
 	cout<<endl<<endl;
+}
+void logs()
+{
+
+     string text;
+
+    int n;
+
+    cout<<"1. PCOS"<<endl;
+    cout<<"2. Endometriosis"<<endl;
+    cout<<"3. Firbroids"<<endl;
+    cout<<"4. Gynecologists"<<endl;
+    cout<<"5. Period Poverty"<<endl;
+    cout<<"0. Exit"<<endl<<endl;
+
+    cin>>n;
+    system("cls");
+
+    switch(n)
+    {
+
+    case 1:
+    {
+        ifstream infile;
+        infile.open("PCOS.txt");
+
+        if(infile.is_open())
+        {
+            char mychar;
+
+            while (infile)
+            {
+                mychar = infile.get();
+                cout<<mychar;
+            }
+        }
+
+        infile.close();
+
+        break;
+
+    }
+
+    case 2:
+    {
+        ifstream infile;
+        infile.open("Endometriosis.txt");
+
+        if(infile.is_open())
+        {
+            char mychar;
+
+            while (infile)
+            {
+                mychar = infile.get();
+                cout<<mychar;
+            }
+        }
+
+        infile.close();
+
+        break;
+
+    }
+
+
+    case 3:
+    {
+        ifstream infile;
+        infile.open("Fibroids.txt");
+
+        if(infile.is_open())
+        {
+            char mychar;
+
+            while (infile)
+            {
+                mychar = infile.get();
+                cout<<mychar;
+            }
+        }
+
+        infile.close();
+
+        break;
+
+    }
+
+    case 4:
+    {
+        ifstream infile;
+        infile.open("Gynocologists.txt");
+
+        if(infile.is_open())
+        {
+            char mychar;
+
+            while (infile)
+            {
+                mychar = infile.get();
+                cout<<mychar;
+            }
+        }
+
+        infile.close();
+
+        break;
+
+    }
+
+    case 5:
+    {
+        ifstream infile;
+        infile.open("PeriodPoverty.txt");
+
+        if(infile.is_open())
+        {
+            char mychar;
+
+            while (infile)
+            {
+                mychar = infile.get();
+                cout<<mychar;
+            }
+        }
+
+        infile.close();
+
+        break;
+
+    }
+
+    default:
+        {
+            exit;
+        }
+
+
+    }
+
+
 }
 class user
 {
@@ -158,7 +302,9 @@ void menu2(){
             cout << endl;
             console.print("4. Your Symptoms",Color::LIGHTBLUE);
             cout << endl;
-            console.print("5. LogOut",Color::RED);
+            console.print("5. View Logs", Color :: LIGHTBLUE);
+            cout<<endl;
+            console.print("6. LogOut",Color::RED);
             cout << endl;
             cin >> x;
             string no2;
@@ -177,6 +323,10 @@ void menu2(){
                 d1.viewSymptoms(loggedin_userId,loggedin_user);
                 break;
             case 5:
+                logs();
+                break;
+
+            case 6:
                 logout();
                 choice = 1;
                 break;
@@ -261,4 +411,5 @@ void login()
         loggedin_userId=0;
 	}
 };
+
 

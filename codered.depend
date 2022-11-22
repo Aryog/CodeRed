@@ -340,7 +340,7 @@
 1668941274 d:\code_red\copied frim main_project\codered\utils.cpp
 	"./DEFINES.hpp"
 
-1668941213 d:\code_red\copied frim main_project\codered\login.cpp
+1669106702 d:\code_red\copied frim main_project\codered\login.cpp
 	<iostream>
 	<winsock.h>
 	<windows.h>
@@ -352,6 +352,8 @@
 	<conio.h>
 	<cstring>
 	<map>
+	<fstream>
+	<string>
 	"./user.cpp"
 
 1476096933 c:\mingw\include\mysql.h
@@ -377,7 +379,7 @@
 
 1476097177 c:\mingw\include\my_alloc.h
 
-1669083976 d:\code_red\copied frim main_project\codered\user.cpp
+1669103485 d:\code_red\copied frim main_project\codered\user.cpp
 	<iostream>
 	<winsock.h>
 	<windows.h>
