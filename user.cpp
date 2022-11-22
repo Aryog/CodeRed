@@ -282,7 +282,7 @@ class detail{
         system("cls");
         cout<<userId<<endl;
         cout<<"Hi "<<user<<"!"<<endl;
-        cout<<"You have following symptoms now :(Active symptoms are marked as (\xfb)) "<<endl;
+        cout<<"You have following symptoms now :(Active symptoms are marked as (Y)) "<<endl;
         MYSQL *conn;
         MYSQL_RES* res;
         MYSQL_ROW row;
@@ -303,15 +303,15 @@ class detail{
         // sym_5= "Acne";
         if(row){
             (stoi(row[0])==1)?
-                cout<<"Headache\t\t(\xfb)\n":cout<<"Headache\t\t(x)\n";
+                cout<<"Headache\t\t(Y)\n\n":cout<<"Headache\t\t(N)\n\n";
             (stoi(row[1])==1)?
-                cout<<"Abdominal pain\t\t(\xfb)\n":cout<<"Abdominal pain\t\t(x)\n";
+                cout<<"Abdominal pain\t\t(Y)\n\n":cout<<"Abdominal pain\t\t(N)\n\n";
             (stoi(row[2])==1)?
-                cout<<"Back ache\t\t(\xfb)\n":cout<<"Back ache\t\t(x)\n";
+                cout<<"Back ache\t\t(Y)\n\n":cout<<"Back ache\t\t(N)\n\n";
             (stoi(row[3])==1)?
-                cout<<"Sleep apenea\t\t(\xfb)\n":cout<<"Sleep apenea\t\t(x)\n";
+                cout<<"Sleep apenea\t\t(Y)\n\n":cout<<"Sleep apenea\t\t(N)\n\n";
             (stoi(row[4])==1)?
-                cout<<"Acne\t\t\t(\xfb)\n":cout<<"Acne\t\t\t(x)\n";
+                cout<<"Acne\t\t\t(Y)\n\n":cout<<"Acne\t\t\t(N)\n\n";
             // cout<<row[0]<<row[1]<<row[2]<<row[3]<<row[4]<<endl;
         }
         else{
