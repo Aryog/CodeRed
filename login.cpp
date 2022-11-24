@@ -14,7 +14,7 @@
 #include "./user.cpp"
 // #include "./Console.cpp"
 using namespace std;
-
+class user;
 int users =0;
 int count_attempt=0;
 int curr_user=0;
@@ -166,6 +166,8 @@ void logs()
 
 
     }
+    user logs;
+     logs.menu2();
 
 
 }
@@ -324,6 +326,7 @@ void menu2(){
                 break;
             case 5:
                 logs();
+
                 break;
 
             case 6:
