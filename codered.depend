@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1669048414 source:d:\code_red\copied frim main_project\codered\main.cpp
+1669358521 source:d:\code_red\copied frim main_project\codered\main.cpp
 	"./Calender.cpp"
 	"./DEFINES.hpp"
 	"./Calender.cpp"
@@ -340,7 +340,7 @@
 1668941274 d:\code_red\copied frim main_project\codered\utils.cpp
 	"./DEFINES.hpp"
 
-1669108960 d:\code_red\copied frim main_project\codered\login.cpp
+1669360904 d:\code_red\copied frim main_project\codered\login.cpp
 	<iostream>
 	<winsock.h>
 	<windows.h>
@@ -379,7 +379,7 @@
 
 1476097177 c:\mingw\include\my_alloc.h
 
-1669103485 d:\code_red\copied frim main_project\codered\user.cpp
+1669360070 d:\code_red\copied frim main_project\codered\user.cpp
 	<iostream>
 	<winsock.h>
 	<windows.h>

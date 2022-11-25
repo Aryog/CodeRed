@@ -60,8 +60,6 @@ bool handleCalenderInput(int key, Calender &calender)
 {
     switch (key)
     {
-
-
     case 72: // move up
         calender.subDay(7);
         return true;
@@ -81,7 +79,8 @@ bool handleCalenderInput(int key, Calender &calender)
 
 int main(void)
 {
-    showtime();
+    user u;
+    u.showtime();
     Console console;
     cout << " \t \t \t \t \t  " ;console.print("Period Tracking System",Color::LIGHTGREEN);cout<< endl
          << endl

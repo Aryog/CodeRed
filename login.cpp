@@ -13,6 +13,8 @@
 #include<string>
 #include "./user.cpp"
 // #include "./Console.cpp"
+
+void blog(int);
 using namespace std;
 class user;
 int users =0;
@@ -21,7 +23,19 @@ int curr_user=0;
 int user_no=0;
 string loggedin_user="";
 int loggedin_userId=0;
-void showtime()
+
+class user
+{
+
+private:
+string username;
+string password;
+string cycleLen;
+string periodLen;
+Console console;
+public:
+
+    void showtime()
 {
 	time_t now = time(0);
 	char *dt = ctime(&now);
@@ -43,143 +57,133 @@ void logs()
     cout<<"0. Exit"<<endl<<endl;
 
     cin>>n;
-    system("cls");
+    //system("cls");
 
-    switch(n)
+    blog(n);
+}
+void blog(int n)
+{
+
+
+    if(n==1)
     {
-
-    case 1:
+        char ch;
+        ifstream in;
+        in.open("PCOS.txt", ios::in);
+        if (in.fail())
     {
-        ifstream infile;
-        infile.open("PCOS.txt");
-
-        if(infile.is_open())
-        {
-            char mychar;
-
-            while (infile)
-            {
-                mychar = infile.get();
-                cout<<mychar;
-            }
-        }
-
-        infile.close();
-
-        break;
-
+        cout << "Error opening file" << endl;
+        cout << "Exiting ...." << endl;
+        exit(1);
     }
-
-    case 2:
+       cout << "content of the file" << endl;
+    while (in.get(ch))
     {
-        ifstream infile;
-        infile.open("Endometriosis.txt");
+        cout << ch;
+    }
+    in.close();
 
-        if(infile.is_open())
-        {
-            char mychar;
 
-            while (infile)
-            {
-                mychar = infile.get();
-                cout<<mychar;
-            }
-        }
-
-        infile.close();
-
-        break;
 
     }
 
 
-    case 3:
+      else if(n==2)
     {
-        ifstream infile;
-        infile.open("Fibroids.txt");
-
-        if(infile.is_open())
-        {
-            char mychar;
-
-            while (infile)
-            {
-                mychar = infile.get();
-                cout<<mychar;
-            }
-        }
-
-        infile.close();
-
-        break;
-
-    }
-
-    case 4:
+        char ch;
+        ifstream in;
+        in.open("Endometriosis.txt", ios::in);
+        if (in.fail())
     {
-        ifstream infile;
-        infile.open("Gynocologists.txt");
-
-        if(infile.is_open())
-        {
-            char mychar;
-
-            while (infile)
-            {
-                mychar = infile.get();
-                cout<<mychar;
-            }
-        }
-
-        infile.close();
-
-        break;
-
+        cout << "Error opening file" << endl;
+        cout << "Exiting ...." << endl;
+        exit(1);
     }
-
-    case 5:
+       cout << "content of the file" << endl;
+    while (in.get(ch))
     {
-        ifstream infile;
-        infile.open("PeriodPoverty.txt");
+        cout << ch;
+    }
+    in.close();
 
-        if(infile.is_open())
-        {
-            char mychar;
 
-            while (infile)
-            {
-                mychar = infile.get();
-                cout<<mychar;
-            }
-        }
-
-        infile.close();
-
-        break;
 
     }
 
-    default:
-        {
-            exit;
-        }
+     else if(n==3)
+    {
+        char ch;
+        ifstream in;
+        in.open("Fibroids.txt", ios::in);
+        if (in.fail())
+    {
+        cout << "Error opening file" << endl;
+        cout << "Exiting ...." << endl;
+        exit(1);
+    }
+       cout << "content of the file" << endl;
+    while (in.get(ch))
+    {
+        cout << ch;
+    }
+    in.close();
+
 
 
     }
-    user logs;
-     logs.menu2();
 
+      else if(n==4)
+    {
+        char ch;
+        ifstream in;
+        in.open("Gynocologists.txt", ios::in);
+        if (in.fail())
+    {
+        cout << "Error opening file" << endl;
+        cout << "Exiting ...." << endl;
+        exit(1);
+    }
+       cout << "content of the file" << endl;
+    while (in.get(ch))
+    {
+        cout << ch;
+    }
+    in.close();
+
+
+
+    }
+
+     else if(n==5)
+    {
+        char ch;
+        ifstream in;
+        in.open("periodpoverty.txt", ios::in);
+        if (in.fail())
+    {
+        cout << "Error opening file" << endl;
+        cout << "Exiting ...." << endl;
+        exit(1);
+    }
+       cout << "content of the file" << endl;
+    while (in.get(ch))
+    {
+        cout << ch;
+    }
+    in.close();
+
+
+
+    }
+  else if(n==0)
+    {
+        return;
+
+    }
+    else
+        return;
 
 }
-class user
-{
-private:
-string username;
-string password;
-string cycleLen;
-string periodLen;
-Console console;
-public:
 bool handleCalenderInput(int key, Calender &calender)
 {
     switch (key)
@@ -197,7 +201,6 @@ bool handleCalenderInput(int key, Calender &calender)
         calender.addDay(1);
         return true;
     }
-
     return false; // key is not handled
 }
 string cal(int len){
@@ -414,5 +417,3 @@ void login()
         loggedin_userId=0;
 	}
 };
-
-
